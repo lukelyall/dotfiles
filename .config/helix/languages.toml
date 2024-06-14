@@ -1,0 +1,13 @@
+[language-server]
+biome = { command = "biome", args = ["lsp-proxy"] }
+pyright = { command = "pyright-langserver", args = ["--stdio"] }
+ruff = { command = "ruff-lsp" }
+
+[language-server.rust-analyzer.config.check]
+command = "clippy"
+
+[[language]]
+name = "python"
+language-servers = [ { name = "pyright", except-features = [ "format", "diagnostics" ] }, "ruff" ]
+formatter = { command = "ruff", args = ["format", "--line-length=200", "--quiet", "-"] }
+auto-format = true
