@@ -2,8 +2,9 @@ theme = "dracula_at_night"
 
 [editor]
 line-number = "relative"
+mouse = false
 true-color = true
-bufferline = "multiple"
+bufferline = "always"
 popup-border = "all"
 
 [editor.statusline]
@@ -11,7 +12,6 @@ left = [
   "mode", 
   "version-control",
   "read-only-indicator",
-  "file-name", 
   "file-modification-indicator", 
 ]
 right = [ 

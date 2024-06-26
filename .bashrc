@@ -116,45 +116,10 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# ssh
-alias john="ssh llyall@john.cedarville.edu"
-alias notis="ssh -p 22 notis@163.11.236.128" # password:NOSTR_philippians3:8
 # navigation
 alias desktop="cd /mnt/c/Users/lukel/Desktop"
-alias pdf-merger="python3 /mnt/c/Users/lukel/Desktop/pdf-merger/pdf-merger.py"
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH=$BUN_INSTALL/bin:$PATH
-. "$HOME/.cargo/env"
-
-# coloring the prompt
-# PS1="\W $"
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-export MODULAR_HOME="/home/llyall/.modular"
-export PATH="/home/llyall/.modular/pkg/packages.modular.com_mojo/bin:$PATH"
-
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 export COLORTERM=truecolor
-
-# Omnisharp
-export PATH=$PATH:/home/llyall/omnisharp
-
-# Dotnet
-# export DOTNET_ROOT=/usr/share/dotnet
-# export PATH=$PATH:/usr/share/dotnet
-
-# OHMYPOSH PROMPT
-# oh-my-posh init
-# eval "$(oh-my-posh init bash)"
-# eval "$(oh-my-posh init bash --config ~/poshthemes/microverse-power.omp.json)"
-
-# STARSHIP PROMPT
-#eval "$(starship init bash)"
 
 # CUSTOM PROMPT (inspired by Samuel Davis)
 source $HOME/.git-prompt.sh
@@ -164,9 +129,3 @@ PROMPT_COMMAND='__git_ps1 "\[\e[0;32m\]┌──(\[\e[m\]\[\e[1;32m\]\u@\H\[\e[m
 
 # ls color hilighting removed
 LS_COLORS="ow=01;36;40" && export LS_COLORS
-
-# neofetch
-
-fastfetch
-export DOTNET_ROOT=/usr/share/dotnet
-export PATH=$PATH:/usr/share/dotnet
